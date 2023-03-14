@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Emissão de certificados</title>
+
+   
+</head>
+<body>
+    <div id="form-fundo">
+
+        <h1>Emissão de Certificados</h1>
+        <h3>Texto explicando como funciona a aplicação</h3>
+
+        <div id="form-frente">
+            <form action="/certificados" id="certificados" method="post">
+                <div class="mb-3">
+                    <label for="nomecurso" >Nome do curso/treinamento</label>
+                    <input type="text" name="nomecurso" id="nomecurso"><br><br>
+                    <label for="datacurso" >Data de realização</label>
+                    <input type="date" name="datacurso" id="datacurso"><br><br>
+                    <label for="cargahorario">Carga hohária (horas)</label>
+                    <input type="number" name="cargahorario" id="cargahorario"><br><br>
+                    <label for="conteudo" >Conteúdo programático</label>
+                    <input type="text" name="conteudo" id="conteudo"><br><br>
+                    <label for="empresa" >Nome da empresa</label>
+                    <input type="text"  name="empresa" id="empresa"><br><br>
+                    <label for="nomeinstrutor">Nome do instrutor</label>
+                    <input type="text" name="nomeinstrutor" id="nomeinstrutor"><br><br>
+                    <label for="registroinstrutor" >Registro do instrutor</label>
+                    <input type="text" name="registroinstrutor" id="registroinstrutor"><br><br>
+                    <label for="nomeresponsavel" >Nome do responsável técnico</label>
+                    <input type="text" name="nomeresponsavel" id="nomeresponsavel"><br><br>
+                    <label for="registroresponsavel" >Registro do responsável técnico</label>
+                    <input type="text" name="registroresponsavel" id="registroresponsavel"><br><br>
+                </div>
+                
+                <div>
+                    <h5>Explicar que para fazer a geracao de multiplos certificados é necessario fazer o dowloar do arquivo modelo, preencher os campos de nome e CPF e depois fazer o upload do arquivo</h5>
+                </div>
+
+                <div id="form-colab">
+                    <label for="nomecolab" >Nome do colaborador</label>
+                    <input type="text" name="nomecolab" id="nomecolab"><br><br>
+                    <label for="cpf" >CPF</label>
+                    <input type="text" name="cpf" id="cpf"><br><br>
+                </div>
+                <div class="mb-3">
+                    <button type="submit" id="btn_certificados">GERAR CERTIFICADOS</button><br><br>
+                </div>
+            </form>
+
+            <form action="/download" method="post">
+                
+                <button type="submit">Download</button><br><br>
+
+            </form>
+        
+            <div id="form_frente" class="upload">
+                <form action="/upload" method="post" enctype="multipart/form-data">
+                    <input type="file" name="documento" id="documento">
+                    <button type="submit">Enviar arquivo</button>
+                </form>
+    
+            </div>
+
+        </div>
+    </div>    
+    {% set menssagem = get_flashed_messages() %}
+    {% if menssagem %}
+        <div class="flash_alerta">
+            {{menssagem[0]}}
+        </div>
+    {% endif %}
+</body>
+</html>
