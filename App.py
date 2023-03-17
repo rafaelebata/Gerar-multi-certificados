@@ -4,6 +4,7 @@ import pandas as pd
 import shutil
 
 import funcao
+from datetime import datetime
 
 
 
@@ -28,6 +29,9 @@ def coleta ():
     nomecu =  request.form.get('nomecurso')
     colab =  request.form.get('nomecolab')
     cpf =  request.form.get('cpf')
+
+    corrige = datetime.strptime(data, '%Y-%m-%d')
+    data1 = corrige.strftime('%d/%m/%Y')
     
     if os.path.exists('arquivos/certificado/Modelo_de_preenchimento.csv'):
 
@@ -43,7 +47,7 @@ def coleta ():
             colab = (linha['Nome'])
             cpf = (linha['CPF'])
 
-            funcao.canva(colab, cpf, nomecu, data, cargh, nomeempresa, contprog, nomerestec, regist_resp, nomeinst, regist_inst)
+            funcao.canva(colab, cpf, nomecu, data1, cargh, nomeempresa, contprog, nomerestec, regist_resp, nomeinst, regist_inst)
 
             tab = tab.drop(indice) 
 
@@ -51,7 +55,7 @@ def coleta ():
 
     else:
 
-        funcao.canva(colab, cpf, nomecu, data, cargh, nomeempresa, contprog, nomerestec, regist_resp, nomeinst, regist_inst)
+        funcao.canva(colab, cpf, nomecu, data1, cargh, nomeempresa, contprog, nomerestec, regist_resp, nomeinst, regist_inst)
 
         shutil.move(f'certificado - {colab}.pdf', 'arquivos/certificado/')
     

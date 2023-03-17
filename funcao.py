@@ -6,10 +6,11 @@ import shutil
 import zipfile
 import os
 
+
 #criar os imputs
 
 
-def canva(colab,cpf, nomecu, data, cargh, nomeempresa, contprog, nomerestec, regist_resp, nomeinst, regist_inst):
+def canva(colab,cpf, nomecu, data1, cargh, nomeempresa, contprog, nomerestec, regist_resp, nomeinst, regist_inst):
     estilo = ParagraphStyle('Estilo do conteudo',
                             fontName='Helvetica',
                             fontSize=14,
@@ -20,7 +21,7 @@ def canva(colab,cpf, nomecu, data, cargh, nomeempresa, contprog, nomerestec, reg
     arquivo.drawString(70, 645, f'{colab}' )
     arquivo.drawString(215, 622, f'{cpf}' )
     arquivo.drawString(70, 595, f'{nomecu}' )
-    arquivo.drawString(210, 570, f'{data}' )
+    arquivo.drawString(210, 570, f'{data1}' )
     arquivo.drawString(500, 570, f'{cargh}' )
     arquivo.drawString(70, 520, f'{nomeempresa}' )
     p1 = Paragraph( f'{contprog}',estilo)
@@ -54,6 +55,9 @@ def delete(pasta):
 
     return
 
+
+
+     
         
 
 #gerar um PDF em A4
