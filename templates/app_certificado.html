@@ -9,9 +9,6 @@
 <body>
     <div id="form-fundo">
 
-        <h1>Emissão de Certificados</h1>
-        <h3>Com esta aplicação, é possível gerar vários certificados simultaneamente, o que pode aumentar significativamente a sua produtividade, poupando-lhe o tempo que seria gasto em tarefas repetitivas.</h3>
-
         <div id="form-frente">
             <form action="/certificados" id="certificados" method="post">
                 <div class="mb-3">
@@ -21,8 +18,8 @@
                     <input type="date" name="datacurso" id="datacurso"><br><br>
                     <label for="cargahorario">Carga hohária (horas)</label>
                     <input type="number" name="cargahorario" id="cargahorario"><br><br>
-                    <label for="conteudo" >Conteúdo programático</label>
-                    <textarea type="text" rows="9" name="conteudo" id="conteudo"></textarea><br><br>
+                    <label for="conteudo" >Conteúdo programático</label><br>
+                    <textarea type="text" rows="15" cols="80" name="conteudo" id="conteudo"></textarea><br><br>
                     <label for="empresa" >Nome da empresa</label>
                     <input type="text"  name="empresa" id="empresa"><br><br>
                     <label for="nomeinstrutor">Nome do instrutor</label>
@@ -34,17 +31,13 @@
                     <label for="registroresponsavel" >Registro do responsável técnico</label>
                     <input type="text" name="registroresponsavel" id="registroresponsavel"><br><br>
                 </div>
-                
-                <div>
-                    <h5>Para gerar um único certificado, é necessário preencher todos os campos obrigatórios e acionar o botão "GERAR CERTIFICADOS". Entretanto, se houver necessidade de gerar múltiplos certificados, é possível baixar o arquivo modelo em "DOWNLOAD", preencher as colunas referentes a Nome e CPF, fazer o upload do arquivo e enviar. Depois disso, preencha todos os campos obrigatórios e acione o botão "GERAR CERTIFICADOS"!</h5>
-                </div>
 
                 <div id="form-colab">
                     <label for="nomecolab" >Nome do colaborador</label>
                     <input type="text" name="nomecolab" id="nomecolab"><br><br>
                     <label for="cpf" >CPF</label>
                     <input type="text" name="cpf" id="cpf"><br><br>
-                </div>
+                </div><br><br><br><br><br><br>
                 <div class="mb-3">
                     <button type="submit" id="btn_certificados">GERAR CERTIFICADOS</button><br><br>
                 </div>
