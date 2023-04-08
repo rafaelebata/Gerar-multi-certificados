@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body { 
+    
+    height: auto;
+    display: grid;
+    place-content: center;
+    font-family: 'Avenir', sans-serif;
+    color: #1C2A45;
+    text-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  @font-face {
+    font-family: 'Open Sans';
+    src: url('-Regular.ttf') format('truetype');
+  }
+  
+  h2 {
+    margin-top: 15px;
+    margin-bottom: 30px;
+  
+    padding-top: 5px;
+    padding-bottom: 5px;
+  
+    text-align: center;
+    color: white;
+  
+    border-radius: 5px 5px 5px 5px;
+    background-color: #FF6E5A;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  .container {
+    margin-bottom: 20px;
+  }
+  
+  textarea {
+    margin-top: 7px;
+    resize: none;
+    border: 2px solid #FF6E5A;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  input {
+    border: 2px solid #FF6E5A;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  #form-colab {
+    display: flex;
+    flex-direction: row;
+  
+    gap: 70px;
+  }
+  
+  #certificados {
+    margin-bottom: 25px;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 50%;
+  }
+  
+  button {
+    padding: 5px 15px;
+    border-radius: 5px 5px 5px 5px;
+  
+    cursor: pointer;
+  
+    border: 0;
+    background-color: #FF6E5A;
+  
+    color: white;
+    font-style: bold;
+  }
+  
+  #btn_certificados {
+    margin-top: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  .download {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  #documento {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
+  
+  
+  
+  .submit {
+    margin-left: 195px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  }
